@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Oficers", "Oficers\Oficers.sqlproj", "{621C4B95-1312-49D8-9A51-48B15B04E40C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficersInterface", "OfficersInterface\OfficersInterface.csproj", "{D3EBD6D6-F1E7-4172-8317-2DFCC802ED3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficersForm", "OfficersForm\OfficersForm.csproj", "{F7ECFEF1-DFBA-4475-91F9-8DCF3F9474A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,10 @@ Global
 		{621C4B95-1312-49D8-9A51-48B15B04E40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{621C4B95-1312-49D8-9A51-48B15B04E40C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{621C4B95-1312-49D8-9A51-48B15B04E40C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{D3EBD6D6-F1E7-4172-8317-2DFCC802ED3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3EBD6D6-F1E7-4172-8317-2DFCC802ED3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3EBD6D6-F1E7-4172-8317-2DFCC802ED3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3EBD6D6-F1E7-4172-8317-2DFCC802ED3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7ECFEF1-DFBA-4475-91F9-8DCF3F9474A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7ECFEF1-DFBA-4475-91F9-8DCF3F9474A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7ECFEF1-DFBA-4475-91F9-8DCF3F9474A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7ECFEF1-DFBA-4475-91F9-8DCF3F9474A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

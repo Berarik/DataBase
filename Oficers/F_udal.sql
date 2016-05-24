@@ -3,7 +3,7 @@
 	[Nvb] NCHAR(8) NOT NULL PRIMARY KEY, 
     [Udal] NCHAR(13) NOT NULL, 
     CONSTRAINT [OfficersFK] FOREIGN KEY ([Nvb]) REFERENCES [Officers]([Nvb]), 
-    CONSTRAINT [S_UdalFK] FOREIGN KEY ([Udal]) REFERENCES [S_udal]([Udal])
+    CONSTRAINT [S_UdalFK] FOREIGN KEY ([Udal]) REFERENCES [S_udal]([Udal]) 
 )
 
 GO

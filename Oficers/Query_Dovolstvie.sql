@@ -8,7 +8,7 @@
 		[dbo].[S_stag].[D_stag] as "Надбавка за стаж",
 		[dbo].[S_udal].[Udal] as "Категория удалѐнности",
 		[dbo].[S_udal].[D_udal] as "Надбавка за удалённость",
-		[dbo].[S_vredn].[Vredn] as "категории вредности условий работы",
+		[dbo].[S_vredn].[Vredn] as "Категории вредности условия работы",
 		[dbo].[S_vredn].[D_Vredn] as "Надбавка за вредность", 
 		([dbo].[S_vredn].[D_Vredn]+[dbo].[S_zvan].[D_zvan]+[dbo].[S_dolgn].[O_dolgn]+[dbo].[S_udal].[D_udal])+[dbo].[S_stag].[D_stag]*([dbo].[S_vredn].[D_Vredn]+[dbo].[S_zvan].[D_zvan]+[dbo].[S_dolgn].[O_dolgn]+[dbo].[S_udal].[D_udal]) as "Довольствие"
 

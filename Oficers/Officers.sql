@@ -1,22 +1,23 @@
 ﻿CREATE TABLE [dbo].[Officers]
 (
-	[Nvb] NCHAR(8) NOT NULL PRIMARY KEY, 
-    [FIO] NCHAR(35) NOT NULL, 
-    [Birth_D] DATE NOT NULL  , 
-    [Zvan] NCHAR(13) NOT NULL DEFAULT N'Мл. лейтенант', 
-    [Dolgn] NCHAR(11) NOT NULL DEFAULT N'Комвзвода  ', 
+	[Nvb] CHAR(8) NOT NULL PRIMARY KEY , 
+    [FIO] CHAR(35) NOT NULL, 
+    [Birth_D] DATE NOT NULL, 
+    [Zvan] CHAR(13) NOT NULL DEFAULT N'Мл. лейтенант', 
+    [Dolgn] CHAR(11) NOT NULL DEFAULT N'Комвзвода  ', 
     [Stag] INT NOT NULL DEFAULT 0, 
 	CONSTRAINT [Birth_D_Check] CHECK (Birth_D < N'1997-01-01'), 
     CONSTRAINT [StagCheck] CHECK (Stag <= 30 and Stag >= 0), 
 	CONSTRAINT [ZvanFK] FOREIGN KEY ([Zvan]) REFERENCES [S_zvan]([Zvan]), 
-    CONSTRAINT [S_dolgnFK] FOREIGN KEY ([Dolgn]) REFERENCES [S_dolgn]([Dolgn]), 
-	CONSTRAINT [ZvanDolgnCheck] CHECK  ( (Zvan = N'Мл. лейтенант' AND  Dolgn =  N'Замкомроты ') or
-	(Zvan = N'Лейтенант    ' and (Dolgn = N'Комвзвода  ' or Zvan = N'Ст. лейтенант' )) or
-	(Zvan = N'Ст. лейтенант' and( Dolgn =  N'Комроты    '  or Dolgn = N'Комвзвода  ' or Zvan = N'Ст. лейтенант' )) or
-	(Zvan = N'Капитан      ' and (Dolgn =  N'Комроты    ' or Dolgn =  N'Замкомбат  ' or Dolgn =  N'Комбат     ' )) or
-	(Zvan = N'Майор        ' and ( Dolgn =  N'Комбат     ' or Dolgn =  N'Начштаполка' or Dolgn =  N'Замкомполка'  ))or 
-	(Zvan = N'Подполковник ' and ( Dolgn =  N'Комбат     ' or Dolgn =  N'Замкомполка'  or Dolgn =  N'Комполка   ' or Dolgn =  N'Начштаполка')) or 
-	(Zvan = N'Полковник    '  and ( Dolgn =  N'Комполка   ' or Dolgn =  N'Начштаполка')))
+    CONSTRAINT [S_dolgnFK] FOREIGN KEY ([Dolgn]) REFERENCES [S_dolgn]([Dolgn]) , 
+	CONSTRAINT [ZvanDolgnCheck] CHECK  ( 
+	(Zvan = 'Мл. лейтенант' AND  Dolgn =  'Комвзвода  ') or
+	(Zvan = 'Лейтенант    ' and ( Dolgn = 'Комвзвода  ' or Dolgn = 'Замкомроты ')) or
+	(Zvan = 'Ст. лейтенант' and ( Dolgn = 'Комвзвода  ' or Dolgn = 'Замкомроты ' or Dolgn = 'Комроты    ' )) or
+	(Zvan = 'Капитан      ' and ( Dolgn = 'Комроты    ' or Dolgn = 'Замкомбат  ' or Dolgn = 'Комбат     ' )) or
+	(Zvan = 'Майор        ' and ( Dolgn = 'Комбат     ' or Dolgn = 'Замкомполка' or Dolgn = 'Начштаполка' ))or 
+	(Zvan = 'Подполковник ' and ( Dolgn = 'Комбат     ' or Dolgn = 'Замкомполка' or Dolgn = 'Начштаполка' or Dolgn = N'Комполка   ')) or 
+	(Zvan = 'Полковник    ' and ( Dolgn = 'Комполка   ' or Dolgn = 'Начштаполка')))
 )
 
 GO

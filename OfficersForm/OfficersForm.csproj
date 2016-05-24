@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7ECFEF1-DFBA-4475-91F9-8DCF3F9474A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OfficersForm</RootNamespace>
+    <AssemblyName>OfficersForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OfficersDS.cs">
+      <DependentUpon>OfficersDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOfficersDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOfficersDB.Designer.cs">
+      <DependentUpon>ViewOfficersDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficersDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OfficersDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Report.rdlc" />
+    <EmbeddedResource Include="ReportList.rdlc" />
+    <EmbeddedResource Include="ViewOfficersDB.resx">
+      <DependentUpon>ViewOfficersDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="OfficersDS.xsc">
+      <DependentUpon>OfficersDS.xsd</DependentUpon>
+    </None>
+    <None Include="OfficersDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OfficersDS2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OfficersDS.xss">
+      <DependentUpon>OfficersDS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\OfficersDS.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_udalDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_udalRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_udalRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_udalRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_vrednDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_vrednRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_vrednRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.F_vrednRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.OfficersDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.OfficersRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.OfficersRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.OfficersRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_dolgnDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_dolgnRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_dolgnRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_dolgnRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_stagDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_stagRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_stagRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_stagRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_udalDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_udalRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_udalRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_udalRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_VrednDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_VrednRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_VrednRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_VrednRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_zvanDataTable.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_zvanRow.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_zvanRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\OfficersDS.S_zvanRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.F_udalTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.F_vrednTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.OfficersTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.S_dolgnTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.S_stagTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.S_udalTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.S_VrednTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.S_zvanTableAdapter.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\OfficersForm.OfficersDSTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\ViewOfficersDB.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

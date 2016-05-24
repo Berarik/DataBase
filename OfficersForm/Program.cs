@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OfficersInterface
+namespace OfficersForm
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace OfficersInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewNode());
+            Application.Run(new ViewOfficersDB());
         }
     }
 }
