@@ -2,7 +2,7 @@
 (
 	[Udal] NCHAR(13) NOT NULL PRIMARY KEY UNIQUE, 
     [D_udal] FLOAT NOT NULL UNIQUE, 
-    CONSTRAINT [UdalCheck] CHECK (Udal = N'средняя      ' or Udal = N'большая      ' or Udal = N'очень большая')
+    CONSTRAINT [UdalCheck] CHECK (Udal = N'средняя' or Udal = N'большая' or Udal = N'очень большая')
 )
 
 GO

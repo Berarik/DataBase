@@ -1,8 +1,7 @@
 ﻿CREATE TABLE [dbo].[S_dolgn]
 (
 	[Dolgn] NCHAR(11) NOT NULL UNIQUE ,
-	CONSTRAINT [DolgnCheck] CHECK (Dolgn = N'Комвзвода  ' or Dolgn =  N'Замкомроты ' or Dolgn =  N'Комроты    ' or Dolgn =  N'Замкомбат  ' or Dolgn =  N'Комбат     ' or Dolgn =  N'Замкомполка' or Dolgn =  N'Начштаполка' or Dolgn =  N'Комполка   '),  
-    [O_dolgn] MONEY NOT NULL UNIQUE, 
+	[O_dolgn] MONEY NOT NULL UNIQUE, 
     PRIMARY KEY ([Dolgn])
 )
 

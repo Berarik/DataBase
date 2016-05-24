@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[S_zvan]
 (
 	[Zvan] NCHAR(13) NOT NULL UNIQUE, 
-	CONSTRAINT [ZvanCHeck] CHECK ( Zvan = N'Мл. лейтенант' or Zvan = N'Лейтенант    ' or Zvan = N'Ст. лейтенант' or Zvan =  N'Капитан      ' or Zvan = N'Майор        ' or Zvan = N'Подполковник ' or Zvan = N'Полковник    '), 
+	CONSTRAINT [ZvanCHeck] CHECK ( Zvan = N'Мл. лейтенант' or Zvan = N'Лейтенант' or Zvan = N'Ст. лейтенант' or Zvan =  N'Капитан' or Zvan = N'Майор' or Zvan = N'Подполковник ' or Zvan = N'Полковник'), 
     [D_zvan] MONEY NOT NULL UNIQUE, 
     PRIMARY KEY ([Zvan]) 
 )

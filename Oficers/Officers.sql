@@ -3,21 +3,11 @@
 	[Nvb] CHAR(8) NOT NULL PRIMARY KEY , 
     [FIO] CHAR(35) NOT NULL, 
     [Birth_D] DATE NOT NULL, 
-    [Zvan] CHAR(13) NOT NULL DEFAULT N'Мл. лейтенант', 
-    [Dolgn] CHAR(11) NOT NULL DEFAULT N'Комвзвода  ', 
     [Stag] INT NOT NULL DEFAULT 0, 
-	CONSTRAINT [Birth_D_Check] CHECK (Birth_D < N'1997-01-01'), 
     CONSTRAINT [StagCheck] CHECK (Stag <= 30 and Stag >= 0), 
 	CONSTRAINT [ZvanFK] FOREIGN KEY ([Zvan]) REFERENCES [S_zvan]([Zvan]), 
     CONSTRAINT [S_dolgnFK] FOREIGN KEY ([Dolgn]) REFERENCES [S_dolgn]([Dolgn]) , 
-	CONSTRAINT [ZvanDolgnCheck] CHECK  ( 
-	(Zvan = 'Мл. лейтенант' AND  Dolgn =  'Комвзвода  ') or
-	(Zvan = 'Лейтенант    ' and ( Dolgn = 'Комвзвода  ' or Dolgn = 'Замкомроты ')) or
-	(Zvan = 'Ст. лейтенант' and ( Dolgn = 'Комвзвода  ' or Dolgn = 'Замкомроты ' or Dolgn = 'Комроты    ' )) or
-	(Zvan = 'Капитан      ' and ( Dolgn = 'Комроты    ' or Dolgn = 'Замкомбат  ' or Dolgn = 'Комбат     ' )) or
-	(Zvan = 'Майор        ' and ( Dolgn = 'Комбат     ' or Dolgn = 'Замкомполка' or Dolgn = 'Начштаполка' ))or 
-	(Zvan = 'Подполковник ' and ( Dolgn = 'Комбат     ' or Dolgn = 'Замкомполка' or Dolgn = 'Начштаполка' or Dolgn = N'Комполка   ')) or 
-	(Zvan = 'Полковник    ' and ( Dolgn = 'Комполка   ' or Dolgn = 'Начштаполка')))
+
 )
 
 GO
